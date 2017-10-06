@@ -17,5 +17,10 @@ class PostPolicy < ApplicationPolicy
     def post_approved?
       record.approved?
     end
+
+    def approve?
+      admin?
+    end
+
 end
 
